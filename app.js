@@ -1,6 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
+const PORT = process.env.PORT || 4000
+
 
 // Create the server
 var app = express();
@@ -37,6 +39,6 @@ app.use((err, req, res, next) => {
   res.render("err");
 });
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log("The app is running on localhost:4000");
 });
